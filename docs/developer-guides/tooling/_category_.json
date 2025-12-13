@@ -1,0 +1,8 @@
+{
+  "label": "Tooling",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Tooling setup and operational workflows (Node, Git, editors, automation)."
+  }
+}

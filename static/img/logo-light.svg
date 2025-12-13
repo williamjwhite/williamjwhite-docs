@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32"
+    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="William J. White">
+    <style>
+    /* Default (light) */
+    .wjw-letter { fill: #111827; }
+
+    /* Docusaurus dark mode: the IMG loads this SVG as a separate doc,
+       but it still respects its *own* media queries. */
+    @media (prefers-color-scheme: dark) {
+      .wjw-letter { fill: #000000ff; }
+    }
+    </style>
+
+    <!-- Accent bar (your cyan stays exactly the same) -->
+    <rect x="2" y="4" width="3" height="24" rx="1.5" fill="#57C4DC" />
+
+    <!-- W monogram -->
+    <path class="wjw-letter" d="M9 24L6 8h2.2l2 11 2.2-11h2.2l2.2 11 2-11H21l-3 16h-2.4l-2-9-2 9H9z" />
+</svg>

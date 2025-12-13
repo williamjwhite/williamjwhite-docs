@@ -1,0 +1,8 @@
+{
+  "label": "Architecture",
+  "position": 21,
+  "link": {
+    "type": "generated-index",
+    "description": "Architecture patterns: monorepos, deployment, environments, boundaries."
+  }
+}

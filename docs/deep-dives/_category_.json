@@ -1,0 +1,8 @@
+{
+  "label": "Deep Dives",
+  "position": 20,
+  "link": {
+    "type": "generated-index",
+    "description": "In-depth technical explorations and architectural decision records."
+  }
+}

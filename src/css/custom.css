@@ -1,0 +1,306 @@
+/* -----------------------------
+   0) Main-site token mirror
+   (copied from williamjwhite.me)
+------------------------------ */
+
+:root {
+  /* Main site tokens */
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+
+  --primary: #57c4dc;
+  --primary-foreground: #171717;
+
+  --secondary: #f5f5f5;
+  --secondary-foreground: #171717;
+
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+
+  --accent: #70cde1;
+  --accent-foreground: #145c6d;
+
+  --destructive: #f80505;
+  --destructive-foreground: #ffffff;
+
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #94a3b8;
+
+  --radius: 0.75rem;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Arial, sans-serif;
+  --font-serif: ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  --shadow-opacity: 0.12;
+  --shadow-color: hsl(220 15% 15%);
+  --shadow-sm: 0 1px 2px hsl(220 15% 15% / 0.12);
+  --shadow: 0 10px 30px hsl(220 15% 15% / 0.12);
+
+  /* Docusaurus / Infima mappings */
+  --ifm-color-primary: var(--primary);
+  --ifm-color-primary-dark: var(--primary);
+  --ifm-color-primary-darker: var(--primary);
+  --ifm-color-primary-darkest: var(--primary);
+  --ifm-color-primary-light: var(--accent);
+  --ifm-color-primary-lighter: var(--accent);
+  --ifm-color-primary-lightest: var(--accent);
+
+  --ifm-background-color: var(--background);
+  --ifm-font-color-base: var(--foreground);
+  --ifm-font-family-base: var(--font-sans);
+  --ifm-font-family-monospace: var(--font-mono);
+
+  --ifm-navbar-background-color: var(--background);
+  --ifm-navbar-shadow: var(--shadow-sm);
+
+  --ifm-footer-background-color: var(--background);
+  --ifm-footer-color: var(--muted-foreground);
+  --ifm-footer-link-color: var(--foreground);
+  --ifm-footer-title-color: var(--foreground);
+
+  --ifm-link-color: var(--primary);
+  --ifm-link-hover-color: var(--accent);
+
+  --ifm-code-font-size: 95%;
+  --ifm-code-border-radius: 10px;
+  --ifm-global-radius: 14px;
+
+  /* Subtle UI surfaces */
+  --ifm-card-background-color: var(--card);
+  --ifm-toc-border-color: var(--border);
+
+  /* Optional: code highlight rhythm */
+  --docusaurus-highlighted-code-line-bg: rgba(87, 196, 220, 0.14);
+}
+
+/* Dark theme mirrors main-site .dark tokens */
+html[data-theme="dark"] {
+  --background: #23272f;
+  --foreground: #fafafa;
+
+  --card: #2a2f38;
+  --card-foreground: #fafafa;
+
+  --popover: #2a2f38;
+  --popover-foreground: #fafafa;
+
+  --primary: #57c4dc;
+  --primary-foreground: #171717;
+
+  --secondary: #1c1f26;
+  --secondary-foreground: #fafafa;
+
+  --muted: #2a2f38;
+  --muted-foreground: #c0c0c0;
+
+  --accent: #70cde1;
+  --accent-foreground: #145c6d;
+
+  --destructive: #ff6b6b;
+  --destructive-foreground: #171717;
+
+  --border: #343434;
+  --input: #343434;
+  --ring: #737373;
+
+  /* Docusaurus / Infima mappings */
+  --ifm-color-primary: var(--primary);
+  --ifm-color-primary-dark: var(--primary);
+  --ifm-color-primary-darker: var(--primary);
+  --ifm-color-primary-darkest: var(--primary);
+  --ifm-color-primary-light: var(--accent);
+  --ifm-color-primary-lighter: var(--accent);
+  --ifm-color-primary-lightest: var(--accent);
+
+  --ifm-background-color: var(--background);
+  --ifm-font-color-base: var(--foreground);
+
+  --ifm-navbar-background-color: var(--background);
+  --ifm-footer-background-color: var(--background);
+
+  --ifm-link-color: var(--primary);
+  --ifm-link-hover-color: var(--accent);
+
+  --docusaurus-highlighted-code-line-bg: rgba(87, 196, 220, 0.18);
+}
+
+/* -----------------------------
+   1) Global typography + spacing
+------------------------------ */
+
+body {
+  font-family: var(--ifm-font-family-base);
+}
+
+/* Make docs “feel” like the main site: slightly rounder, softer surfaces */
+:root {
+  --ifm-global-shadow-lw: var(--shadow-sm);
+  --ifm-global-shadow-md: var(--shadow);
+}
+
+/* -----------------------------
+   2) Existing component polish
+------------------------------ */
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.01em;
+}
+
+.navbar__title {
+  font-weight: 800;
+}
+
+.navbar__item.navbar__link {
+  font-weight: 600;
+}
+
+/* Card-like containers (docs pages, admonitions, etc.) */
+.theme-doc-markdown,
+.theme-doc-toc-desktop,
+.theme-doc-sidebar-container,
+.theme-doc-footer,
+.footer {
+  border-color: var(--border);
+}
+
+/* Code blocks */
+pre code {
+  font-size: 0.92em;
+}
+
+/* Theme transition (matches main site feel) */
+html,
+html * {
+  transition-property: background-color, border-color, color, fill, stroke,
+    box-shadow;
+  transition-duration: 420ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* -------------------------------------------------
+   WilliamJWhite Docs Home — Category Cards
+-------------------------------------------------- */
+
+.wwCardGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.wwCard {
+  grid-column: span 12;
+  display: block;
+  padding: 16px 16px 14px;
+  border-radius: 14px;
+  text-decoration: none !important;
+
+  border: 1px solid var(--ifm-toc-border-color);
+  background: var(--ifm-background-surface-color);
+
+  transition: transform 140ms ease, border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.wwCard:hover {
+  transform: translateY(-1px);
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.wwCardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+  margin-bottom: 6px;
+}
+
+.wwCardDesc {
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.wwCardMeta {
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* Responsive columns */
+@media (min-width: 860px) {
+  .wwCard {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 1180px) {
+  .wwCard {
+    grid-column: span 4;
+  }
+}
+
+.wwCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.wwCardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid var(--ifm-toc-border-color);
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-primary);
+}
+
+/* LOGO SVG */
+/* Swap navbar logo based on Docusaurus theme */
+html[data-theme="dark"] .navbar__logo img {
+  content: url("/img/logo-dark.svg");
+}
+
+html[data-theme="light"] .navbar__logo img {
+  content: url("/img/logo-light.svg");
+}
+/* :root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+} */
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* [data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+} */

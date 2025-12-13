@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="32" viewBox="0 0 120 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="William J. White">
+    <!-- Accent mark -->
+    <rect x="0" y="4" width="4" height="24" rx="2" fill="#57C4DC" />
+
+    <!-- WJW Monogram -->
+    <path d="M14 24L10 8H13L16 20L19 8H22L25 20L28 8H31L27 24H24L21 12L18 24H14Z" fill="currentColor" />
+
+    <!-- Divider dot -->
+    <circle cx="38" cy="16" r="2" fill="#57C4DC" />
+
+    <!-- Text: White -->
+    <path d="M46 24V8H49V21H56V24H46Z" fill="currentColor" />
+    <path d="M58 24V8H61V24H58Z" fill="currentColor" />
+    <path d="M64 24V8H73C75.8 8 78 10.2 78 13C78 15.1 76.9 16.7 75.1 17.3L79 24H75.6L72.1 18H67V24H64ZM67 15H72C73.7 15 75 14 75 13C75 12 73.7 11 72 11H67V15Z" fill="currentColor" />
+    <path d="M82 24V8H85V21H92V24H82Z" fill="currentColor" />
+    <path d="M94 24V8H97V24H94Z" fill="currentColor" />
+    <path d="M100 24V8H109C111.8 8 114 10.2 114 13C114 15.8 111.8 18 109 18H103V24H100ZM103 15H108C109.7 15 111 14 111 13C111 12 109.7 11 108 11H103V15Z" fill="currentColor" />
+</svg>

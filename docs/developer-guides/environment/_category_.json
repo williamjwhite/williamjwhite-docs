@@ -1,0 +1,8 @@
+{
+  "label": "Environments",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Environment setup and operational workflows (Node, Git, editors, automation)."
+  }
+}

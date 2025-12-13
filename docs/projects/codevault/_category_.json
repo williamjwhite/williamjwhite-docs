@@ -1,0 +1,8 @@
+{
+  "label": "CodeVault",
+  "position": 32,
+  "link": {
+    "type": "generated-index",
+    "description": "CodeVault documentation (snippet management, sync, and UX patterns)."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Trakteam",
+  "position": 31,
+  "link": {
+    "type": "generated-index",
+    "description": "Trakteam project documentation (multi-platform SwiftUI operations tooling)."
+  }
+}

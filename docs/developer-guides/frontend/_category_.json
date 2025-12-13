@@ -1,0 +1,8 @@
+{
+  "label": "Frontend",
+  "position": 12,
+  "link": {
+    "type": "generated-index",
+    "description": "Frontend implementation guides (React, Vite, shadcn/ui, Tailwind)."
+  }
+}
