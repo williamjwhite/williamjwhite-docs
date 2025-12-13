@@ -1,5 +1,4 @@
 export type ThemeMode = "dark" | "light";
-
 const COOKIE_NAME = "wjjw_theme";
 
 export function getThemeCookie(): ThemeMode | null {
@@ -13,40 +12,13 @@ export function getThemeCookie(): ThemeMode | null {
 }
 
 export function setThemeCookie(mode: ThemeMode) {
-  // share to all subdomains
-  const domain = ".williamjwhite.me";
-  const maxAge = 60 * 60 * 24 * 365; // 1 year
+  const maxAge = 60 * 60 * 24 * 365;
+  const host = window.location.hostname;
+  const isProd = host.endsWith("williamjwhite.me");
+  const domainPart = isProd ? "Domain=.williamjwhite.me; " : "";
+  const securePart = window.location.protocol === "https:" ? "Secure; " : "";
 
-  // Secure requires https (which you have on GitHub Pages with custom domain)
   document.cookie = `${COOKIE_NAME}=${encodeURIComponent(
     mode
-  )}; Path=/; Domain=${domain}; Max-Age=${maxAge}; SameSite=Lax; Secure`;
+  )}; Path=/; ${domainPart}Max-Age=${maxAge}; SameSite=Lax; ${securePart}`.trim();
 }
-
-// export type ThemeMode = "dark" | "light";
-
-// const COOKIE_NAME = "wjjw_theme";
-// const COOKIE_DOMAIN = ".williamjwhite.me";
-
-// export function getThemeCookie(): ThemeMode {
-//   if (typeof document === "undefined") return "dark";
-
-//   const match = document.cookie.match(
-//     new RegExp(`(?:^|; )${COOKIE_NAME}=(dark|light)`)
-//   );
-
-//   return (match?.[1] as ThemeMode) ?? "dark";
-// }
-
-// export function setThemeCookie(theme: ThemeMode) {
-//   if (typeof document === "undefined") return;
-
-//   document.cookie = [
-//     `${COOKIE_NAME}=${theme}`,
-//     "Path=/",
-//     `Domain=${COOKIE_DOMAIN}`,
-//     "Max-Age=31536000",
-//     "SameSite=Lax",
-//     "Secure",
-//   ].join("; ");
-// }

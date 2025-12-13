@@ -1,31 +1,42 @@
 {
-  // Editor + typechecking config for Docusaurus (NOT used for production build)
+  // Editor/typecheck only; Docusaurus builds via its own pipeline.
   "extends": "@docusaurus/tsconfig",
 
   "compilerOptions": {
     "baseUrl": ".",
-
-    /* ---------- Path aliases ---------- */
-    "paths": {
-      "@/*": ["src/*"]
-    },
-
-    /* ---------- React / TS behavior ---------- */
-    "jsx": "react-jsx",
-    "strict": true,
-
-    /* ---------- Required for theme + .d.ts resolution ---------- */
-    "types": ["node"]
+    "types": ["@docusaurus/module-type-aliases", "@docusaurus/theme-classic"]
   },
-
-  /* ---------- IMPORTANT ---------- */
-  /* We MUST include src so that:
-     - src/theme/root.tsx is typechecked
-     - src/types/docusaurus-theme.d.ts is picked up
-     - src/lib/theme-cookie.ts resolves
-  */
-  "include": ["src"],
-
-  /* ---------- Exclusions ---------- */
   "exclude": [".docusaurus", "build", "node_modules"]
 }
+
+// {
+//   // Editor + typechecking config for Docusaurus (NOT used for production build)
+//   "extends": "@docusaurus/tsconfig",
+
+//   "compilerOptions": {
+//     "baseUrl": ".",
+
+//     /* ---------- Path aliases ---------- */
+//     "paths": {
+//       "@/*": ["src/*"]
+//     },
+
+//     /* ---------- React / TS behavior ---------- */
+//     "jsx": "react-jsx",
+//     "strict": true,
+
+//     /* ---------- Required for theme + .d.ts resolution ---------- */
+//     "types": ["@docusaurus/module-type-aliases", "@docusaurus/theme-classic"]
+//   },
+
+//   /* ---------- IMPORTANT ---------- */
+//   /* We MUST include src so that:
+//      - src/theme/root.tsx is typechecked
+//      - src/types/docusaurus-theme.d.ts is picked up
+//      - src/lib/theme-cookie.ts resolves
+//   */
+//   "include": ["src"],
+
+//   /* ---------- Exclusions ---------- */
+//   "exclude": [".docusaurus", "build", "node_modules"]
+// }
