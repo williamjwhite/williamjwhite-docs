@@ -1,8 +1,31 @@
 {
-  // This file is not used in compilation. It is here just for a nice editor experience.
+  // Editor + typechecking config for Docusaurus (NOT used for production build)
   "extends": "@docusaurus/tsconfig",
+
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+
+    /* ---------- Path aliases ---------- */
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* ---------- React / TS behavior ---------- */
+    "jsx": "react-jsx",
+    "strict": true,
+
+    /* ---------- Required for theme + .d.ts resolution ---------- */
+    "types": ["node"]
   },
-  "exclude": [".docusaurus", "build"]
+
+  /* ---------- IMPORTANT ---------- */
+  /* We MUST include src so that:
+     - src/theme/root.tsx is typechecked
+     - src/types/docusaurus-theme.d.ts is picked up
+     - src/lib/theme-cookie.ts resolves
+  */
+  "include": ["src"],
+
+  /* ---------- Exclusions ---------- */
+  "exclude": [".docusaurus", "build", "node_modules"]
 }
